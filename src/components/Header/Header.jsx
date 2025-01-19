@@ -30,8 +30,13 @@ function Header() {
 			<div className={`${styles.header} ${isScrolled ? styles.headerScrolled : ''}`}>
 				<ul>
 						<li className={styles.liIcons}>
-							<IconMenu />
-							<IconSearch />
+							<button>
+								<IconMenu />
+							</button>
+
+							<button>
+								<IconSearch />
+							</button>
 						</li>
 
 						<li className={styles.liLogo}>
@@ -39,10 +44,15 @@ function Header() {
 						</li>
 
 						<li className={styles.liIcons}>
-							<IconUser />
+							<button>
+								<IconUser />
+							</button>
+
 							<div className={styles.cart}>
-								<IconCart />
-								<p>0</p>
+								<button>
+									<IconCart />
+									<p>0</p>
+								</button>
 							</div>
 						</li>
 

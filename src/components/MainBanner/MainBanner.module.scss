@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+
+.bannerContainer{
+	position: absolute;
+	top: 36px;
+	//border: 2px solid green;
+	width: 100%;
+	height: 43.625rem;
+	z-index: 0;
+	background-image: url('../../../public/static/images/banner/banner-principal-1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+
+	button{
+		color: $color-primary;
+		background-color: #FFFFFF33;	
+		border: 1px solid $color-primary;
+		position: absolute;
+		width: 150px;
+		height: 43px;
+		top: 625px;
+		left: 16px;
+		padding: 12px 24px;
+		gap: 10px;
+		border: 1px 0px 0px 0px;
+		opacity: 0px;
+
+	}
+}
