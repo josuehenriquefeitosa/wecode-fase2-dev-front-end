@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Header.module.scss'
 import ZipCode from '../ZipCode/ZipCode'
+import Menu from '../Menu/Menu'
+
 
 import IconMenu from '../../assets/icons/IconMenu'
 import IconCart from '../../assets/icons/IconCart'
@@ -12,7 +14,7 @@ import IconUser from '../../assets/icons/IconUser'
 
 function Header() {
 	const [isScrolled, setIsScrolled] = useState(false);
-	const [menu, setMenu] = useState(false);
+	const [menuIsOpen, setMenuIsOpen] = useState(false);
 
 	useEffect(()=>{
 		const handleScroll = () =>{
@@ -27,9 +29,17 @@ function Header() {
 
 	}, []);
 
-	const handleMenu = () =>{
-		setMenu(console.log('menu '));
-	}
+	useEffect(() => {
+    if (menuIsOpen) {
+      document.body.style.overflow = 'hidden'; 
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [menuIsOpen]);
+
+  const handleMenu = () => {
+    setMenuIsOpen((prev) => !prev);
+  };
 
 
 	return (
@@ -39,8 +49,9 @@ function Header() {
 				<ul>
 						<li className={styles.liIcons}>
 							<button onClick={handleMenu}>
-								<IconMenu />
+								<IconMenu menuIsOpen={menuIsOpen}/>
 							</button>
+							{menuIsOpen && <Menu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen}/>}
 
 							<button>
 								<IconSearch />

@@ -12,7 +12,7 @@ export default function ModalCep({ closeModal }) {
 
 
 
-  // Função para verificar a validade do CEP e buscar dados
+  
   const handleZipCodeChange = async (e) => {
     const inputZip = e.target.value;
     setZipCode(inputZip);
@@ -48,7 +48,7 @@ export default function ModalCep({ closeModal }) {
       return;
     }
 
-    // Salva os dados no localStorage
+
     const userInfo = { zipCode, city, state };
     localStorage.setItem("bebece:userData", JSON.stringify(userInfo));
 
@@ -67,7 +67,7 @@ export default function ModalCep({ closeModal }) {
               <input
                 type="text"
                 id="zipCode"
-                placeholder="00000000"
+                placeholder="00000-000"
                 value={zipCode}
                 required
                 maxLength={8}

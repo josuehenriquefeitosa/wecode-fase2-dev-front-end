@@ -3,17 +3,17 @@ import ModalCep from '../ModalCep/ModalCep';
 import styles from './ZipCode.module.scss';
 
 export default function ZipCode() {
-  const [isModalOpen, setIsModalOpen] = useState(true); // Controla a abertura do modal
-  const [zipCode, setZipCode] = useState(''); // Estado para armazenar o CEP
-  const [city, setCity] = useState('São Paulo'); // Estado para armazenar a cidade
+  const [isModalOpen, setIsModalOpen] = useState(true); 
+  const [zipCode, setZipCode] = useState(''); 
+  const [city, setCity] = useState('São Paulo'); 
   const [state, setState] = useState('');
 
   useEffect(() => {
     const body = document.body;
     if (isModalOpen) {
-      body.style.overflow = 'hidden'; // Impede o scroll
+      body.style.overflow = 'hidden'; 
     } else {
-      body.style.overflow = 'auto'; // Restaura o scroll
+      body.style.overflow = 'auto'; 
     }
   }, [isModalOpen]);
 
@@ -24,7 +24,7 @@ export default function ZipCode() {
       setZipCode(zipCode);
       setCity(city);
       setState(state);
-      setIsModalOpen(false); // Fecha o modal se os dados já estiverem no localStorage
+      setIsModalOpen(false); 
     }
   }, []);
 
