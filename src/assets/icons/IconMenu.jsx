@@ -2,7 +2,7 @@ import React from 'react'
 
 const IconMenu = () => (
 	<svg width="14" height="15" viewBox="0 0 14 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-		<g clip-path="url(#clip0_1_1917)">
+		<g clipPath="url(#clip0_1_1917)">
 		<path d="M14 6.91663H0V8.08329H14V6.91663Z" fill="currentColor"/>
 		<path d="M14 2.83337H0V4.00004H14V2.83337Z" fill="currentColor"/>
 		<path d="M14 11H0V12.1667H14V11Z" fill="currentColor"/>

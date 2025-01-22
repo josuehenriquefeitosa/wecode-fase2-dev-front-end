@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Header.module.scss'
 import ZipCode from '../ZipCode/ZipCode'
+
 import IconMenu from '../../assets/icons/IconMenu'
 import IconCart from '../../assets/icons/IconCart'
 import IconLogo from '../../assets/icons/IconLogo'
 import IconSearch from '../../assets/icons/IconSearch'
 import IconUser from '../../assets/icons/IconUser'
 
+
+
 function Header() {
 	const [isScrolled, setIsScrolled] = useState(false);
+	const [menu, setMenu] = useState(false);
 
 	useEffect(()=>{
 		const handleScroll = () =>{
@@ -23,6 +27,10 @@ function Header() {
 
 	}, []);
 
+	const handleMenu = () =>{
+		setMenu(console.log('menu '));
+	}
+
 
 	return (
 		<div className={styles.headerContainer}>
@@ -30,7 +38,7 @@ function Header() {
 			<div className={`${styles.header} ${isScrolled ? styles.headerScrolled : ''}`}>
 				<ul>
 						<li className={styles.liIcons}>
-							<button>
+							<button onClick={handleMenu}>
 								<IconMenu />
 							</button>
 

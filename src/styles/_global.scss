@@ -21,6 +21,17 @@ body{
 	background-color: $color-primary;
 }
 
+.modalOpen{
+	overflow: hidden;
+}
+
+input , select{
+	&::placeholder{
+		color: $text-light-close;
+		font-size: 0.75rem;
+	}
+}
+
 button{
 	cursor: pointer;
 
